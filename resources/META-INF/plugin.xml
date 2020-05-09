@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.xxc.study</id>
+    <name>MyPluginStudy</name>
+    <version>1.0</version>
+    <vendor email="xuxingchen2016@gmail.com" url="https://github.com/SevenNight2012">NewsDog</vendor>
+
+    <description><![CDATA[
+This is the plugin of description,just for study
+    ]]></description>
+
+    <change-notes><![CDATA[
+      change notes here,change notes here,change notes here
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <codeInsight.lineMarkerProvider language="JAVA"
+                                        implementationClass="com.xxc.study.FindRouter" />
+        <!-- Add your extensions here -->
+        <codeInsight.lineMarkerProvider language="kotlin"
+                                        implementationClass="com.xxc.study.FindRouter" />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+
+</idea-plugin>
